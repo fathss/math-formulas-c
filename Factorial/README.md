@@ -10,7 +10,9 @@ For example
 This recursive function can easily be implemented in C or any other language that supports a function
 <br><br>
 From the formula above we know that:
-<pre>n! = n x (n - 1)!<br>or<br>F(n) = F(n) x F(n - 1)!</pre>
+<pre>n! = n x (n - 1)!</pre>
+or
+<pre>F(n) = F(n) x F(n - 1)!</pre>
 We can create a function that has one parameter
 <br>
 <pre>typedef unsigned long long ullint;<br>ullint factorial(ullint baseNumber);</pre>
