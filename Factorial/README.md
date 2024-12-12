@@ -49,7 +49,7 @@ If <strong>baseNumber</strong> is not 0, the function calculates the factorial b
 <br><br>
 Let's see how it works for calculating 5!:
 <br>
-Assuming baseNumber as n!:
+Assuming <strong>baseNumber</strong> as n!:
 <ol>
   <li>factorial(5)</li>
   <ul>
