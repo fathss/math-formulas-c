@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 typedef unsigned long long ullint;
-ullint factorial(llint);
+ullint factorial(ullint);
 
 int main(){
 
