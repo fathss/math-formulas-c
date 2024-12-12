@@ -36,10 +36,53 @@ So, looking from the formula, the inside of the function would be:
     return baseNumber * factorial(baseNumber-1);
 }</pre>
 <pre>if (baseNumber == 0){
-    return 0;
+    return 1;
 }
 </pre>
 This part is a base case.
 In recursion we need a condition that stops the function from calling itself endlessly.
 <br>
 By definition, 0! = 1. So if the input baseNumber is 0, the function return 1 directly, and no further recursion happends.
+<br><br>
+<pre>return baseNumber * factorial(baseNumber - 1);</pre>
+If <strong>baseNumber</strong> is not 0, the function calculates the factorial by multiplying <strong>baseNumber</strong> by the result of calling <strong>factorial(baseNumber - 1)</strong>
+<br><br>
+Let's see how it works for calculating 5!:
+<br>
+Assuming baseNumber as n!:
+<ol>
+  <li>factorial(5)</li>
+  <ul>
+    <li>5 x factorial(4)</li>
+  </ul>
+  <li>factorial(4)</li>
+  <ul>
+    <li>4 x factorial(3)</li>
+  </ul>
+  <li>factorial(3)</li>
+  <ul>
+    <li>3 x factorial(2)</li>
+  </ul>
+  <li>factorial(2)</li>
+  <ul>
+    <li>2 x factorial(1)</li>
+  </ul>
+  <li>factorial(5)</li>
+  <ul>
+    <li>1 x factorial(0)</li>
+  </ul>
+  <li>factorial(0)</li>
+  <ul>
+    <li>returns = 1</li>
+  </ul>
+</ol>
+Now, the recursion starts to "unwind" and we get the final result:
+<ul>
+  <li>factorial(1) = 1 x 1 = 1</li>
+  <li>factorial(2) = 2 x 1 = 2</li>
+  <li>factorial(3) = 3 x 2 = 6</li>
+  <li>factorial(4) = 4 x 6 = 24</li>
+  <li>factorial(5) = 5 x 24 = 120</li>
+</ul>
+<br>
+So, the result of 5! is 120
