@@ -6,7 +6,7 @@ int main(){
 
     int n;
     puts("A program for generating a fibonacci sequence up to given number\n");
-    puts("Due to the limitations of data types in C,this program only limits the input until the 93th sequence.\n");
+    puts("Due to the limitations of data types in C, this program only limits the input until the 93th sequence.\n");
     printf(">>>> ");
     scanf("%d", &n);
     printf(">>>> ");
