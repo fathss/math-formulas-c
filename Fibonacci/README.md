@@ -91,7 +91,7 @@ This is how the function works if you call ```fibonacci(4)``` (4th sequence):<br
   </li>
 </ol>
 <br>
-And so the final answer is 3.
+And so the final number is 3.
 <br><br>
 
 You noticed that in ```recursive_fibonacci.c``` file, there is a for loop inside the main function
@@ -115,3 +115,115 @@ And now for the pros and cons of this type of solution
   <li>Exponential time complexity, meaning that to compute fibonacci(40), it computes fibonacci(39), and fibonacci(38), and so on until the base cases</li>
   <li>Recursive calls add overhead due to function call stack management. This makes it slower than iterative or optimized approaches for large inputs.</li>
 </ul>
+
+### 2. Iterative solution
+In iterative solution will mainly use a for loop.
+<br><br>
+For better understanding we'll be looking at the F4 fibonacci number starting from F0.
+<pre>0, 1, 1, 2, 3</pre>
+So, to get F2 we have to add F1 and F0
+<pre>F2 = F1 + F0</pre>
+![image](https://github.com/user-attachments/assets/b07e33a8-05b6-4c20-89ca-91259ee0d39c)
+<br><br>
+and to get F3 we have to add F2 and F1
+<pre>F3 = F2 + F1</pre>
+![image](https://github.com/user-attachments/assets/1cc4197a-acbe-4599-bcf1-5c022253d2c1)
+<br><br>
+and to get F4 we have to add F3 and F2
+<pre>F4 = F3 + F2</pre>
+![image](https://github.com/user-attachments/assets/523b253c-e60f-40fc-888a-0d3cde7bfedd)
+<br><br>
+Notice anything? Any pattern?
+<br>
+For F2, F3, and F4. Let's assume that the two numbers that preceed it as a and b. And the result as c
+<br>
+![image](https://github.com/user-attachments/assets/0f5f3287-4842-4724-9107-862caac5e0e6)
+<br><br>
+So, to get to F4 we first start from 0 and 1 because we already know that F0 = 0 and F1 = 1.<br>
+Then on the next step, we do ```a + b``` to get ```c``` which is F2.<br>
+After that ```a``` moved one tile, and ```b``` moved one tile.<br>
+So now ```a = 1``` and ```b = 1```.<br>
+```a + b``` = ```2``` which is F3.<br>
+Then ```a``` moved one tile and ```b``` moved one tile.<br>
+Now ```a = 1``` and ```b = 2```.<br>
+```a + b = 3``` which is F4.
+<br><br>
+This pattern can be replicated using a for loop:
+```c
+ullint a = 0, b = 1, c;
+
+for (int i = 0; i <= n; i++){
+        if (i == 0){
+            printf("%llu ", a);
+        } else if (i == 1){
+            printf("%llu ", b);
+        } else{
+            c = a + b;
+            printf("%llu ", c);
+            a = b;
+            b = c;
+        }
+    }
+```
+Let's break it down into 3 parts:
+#### 1. Variable declarations
+```c
+ullint a = 0, b = 1, c;
+```
+```ullint``` is a custom data type for ```unsigned long long```, which is used to store large numbers (64-bit integer).<br>
+```a``` and ```b``` are initialized as 0 and 1 respectively. These represent the first two terms of the Fibonacci sequence.<br>
+```c``` is declared to hold the sum of ```a``` and ```b``` (next Fibonacci number).
+
+#### 2. For loop
+```c
+for (int i = 0; i <= n; i++){
+```
+The for loop runs from ```i = 0``` to ```i = n```, where ```n``` is the nth sequence.<br>
+```i``` acts as the counter for the sequence, where ```i``` represents the current Fibonacci term's position.
+
+#### 3. Conditional logic
+Inside the loop, the program handles the Fibonacci sequence calculation and printing based on the value of ```i```:
+
+##### Case 1: First Sequence (i = 0)
+```c
+if (i == 0){
+    printf("%llu ", a);
+}
+```
+If ```i``` is 0, it simply prints the first fibonacci number (```a```), which is 0.
+
+##### Case 2: Second Sequence (i = 1)
+```c
+else if (i == 1){
+    printf("%llu ", b);
+}
+```
+If ```i``` is 1, it prints the second fibonacci number (```b```), which is 1.
+
+##### Case 3: Remaining sequence (i > 1)
+```c
+else {
+    c = a + b;
+    printf("%llu ", c);
+    a = b;
+    b = c;
+}
+```
+For ```i``` > 1 it calculates the next fibonacci number.<br>
+```c = a + b``` Adds the two previous numbers (```a``` and ```b```) to get the next Fibonacci number (```c```).<br>
+```printf("%llu ", c)``` Prints the current fibonacci number (```c```).<br>
+```a``` Shift to ```b```.<br>
+```b``` Shift to ```c```.<br><br>
+So, if n = 4, the loop runs from ```i``` = 0 to ```i``` = 4, and the output is
+```
+0 1 1 2 3
+```
+Step-by-step explanation:<br>
+1. ```i``` = 0, prints 0 (```a = 0```).<br>
+2. ```i``` = 1, prints 1 (```b = 1```).<br>
+3. ```i``` = 2, computes ```c = a + b = 0 + 1 = 1```, prints 1 (```c = 1```), updates ```a``` = ```b``` = 1, ```b``` = ```c``` = 1.<br>
+4. ```i``` = 3, computes ```c = a + b = 1 + 1 = 2```, prints 2 (```c = 2```), updates ```a``` = ```b``` = 1, ```b``` = ```c``` = 2.<br>
+5. ```i``` = 4, computes ```c = a + b = 1 + 2 = 3```, prints 3 (```c = 3```), updates ```a``` = ```b``` = 2, ```b``` = ```c``` = 3.<br>
+
+So, the final number is 3.
+<br><br>
