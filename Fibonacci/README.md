@@ -227,3 +227,18 @@ Step-by-step explanation:<br>
 
 So, the final number is 3.
 <br><br>
+And now for the pros and cons of iterative solution:
+##### Pros
+<ul>
+    <li>Linear time complexity, The iterative approach has a time complexity of O(n), where n is the position of the Fibonacci number to calculate. It calculates each term exactly once without redundant computations, unlike the recursive approach.
+    </li>
+    <li>Low memory usage.</li>
+    <li>Faster execution.</li>
+</ul>
+
+##### Cons
+<ul>
+    <li>Limited readability.</li>
+    <li>Scalability, while iterative methods are efficient for reasonably large n, they may still be slow for extremely large inputs due to limitations in computational power or number representation.
+    </li>
+</ul>
