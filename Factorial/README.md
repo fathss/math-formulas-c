@@ -28,8 +28,9 @@ So, looking from the formula, the inside of the function would be:
 ullint factorial(ullint baseNumber){
     if (baseNumber == 0){
         return 1;
+    } else{
+        return baseNumber * factorial(baseNumber-1);
     }
-    return baseNumber * factorial(baseNumber-1);
 }
 ```
 ```c
