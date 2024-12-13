@@ -12,7 +12,7 @@ int main(){
 
     if (n > 46){
         puts("Consider using the iterative solution for a sequence that exceeds 46th sequence");
-        exit(1);
+        exit(0);
     }
     
     printf(">>>> ");
