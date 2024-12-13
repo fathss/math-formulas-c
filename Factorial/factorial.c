@@ -7,7 +7,7 @@ int main(){
 
     int n;
     puts("A program for generating a factorial of a non-negative integer n, denoted by n!");
-    puts("Due to the limitations of data types in C, this program can only represent 0 <= n <= 20 factorial");
+    puts("Due to the limitations of data types in C, this program can only represent 0! to 20! factorial");
     printf(">>>> ");
     scanf("%d", &n);
     printf(">>>> %llu", factorial(n));
