@@ -13,7 +13,10 @@ From the formula above we know that:
 <pre>n! = n x (n - 1)!</pre>
 We can create a function that has one parameter
 <br>
-<pre>typedef unsigned long long ullint;<br>ullint factorial(ullint baseNumber);</pre>
+```c
+typedef unsigned long long ullint;
+ullint factorial(ullint baseNumber);
+```
 Where ```ullint``` is a custom data type for <strong>unsigned long long</strong>, which is used to store large numbers (64-bit integer).<br>
 ```factorial``` is the name of the function.<br>
 ```(ullint baseNumber)``` is the parameter of the function, which is the number you want to calculate the factorial of.
@@ -21,7 +24,7 @@ Where ```ullint``` is a custom data type for <strong>unsigned long long</strong>
 So, looking from the formula, the inside of the function would be:
 
 
-```
+```c
 ullint factorial(ullint baseNumber){
     if (baseNumber == 0){
         return 1;
@@ -29,7 +32,7 @@ ullint factorial(ullint baseNumber){
     return baseNumber * factorial(baseNumber-1);
 }
 ```
-```
+```c
 if (baseNumber == 0){
     return 1;
 }
@@ -39,7 +42,7 @@ In recursion we need a condition that stops the function from calling itself end
 <br>
 By definition, 0! = 1. So if the input baseNumber is 0, the function return 1 directly, and no further recursion happends.
 
-```
+```c
 return baseNumber * factorial(baseNumber - 1);
 ```
 If <strong>baseNumber</strong> is not 0, the function calculates the factorial by multiplying <strong>baseNumber</strong> by the result of calling <strong>factorial(baseNumber - 1)</strong>
