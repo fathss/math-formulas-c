@@ -141,10 +141,10 @@ For F2, F3, and F4. Let's assume that the two numbers that preceed it as a and b
 <br><br>
 So, to get to F4 we first start from 0 and 1 because we already know that F0 = 0 and F1 = 1.<br>
 Then on the next step, we do ```a + b``` to get ```c``` which is F2.<br>
-After that ```a``` moved one tile, and ```b``` moved one tile.<br>
+After that, ```a``` moved one tile, and ```b``` moved one tile.<br>
 So now ```a = 1``` and ```b = 1```.<br>
 ```a + b``` = ```2``` which is F3.<br>
-Then ```a``` moved one tile and ```b``` moved one tile.<br>
+Then, ```a``` moved one tile and ```b``` moved one tile.<br>
 Now ```a = 1``` and ```b = 2```.<br>
 ```a + b = 3``` which is F4.
 <br><br>
