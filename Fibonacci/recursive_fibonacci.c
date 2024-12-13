@@ -26,7 +26,7 @@ int main(){
 int fibonacci(int num_terms){
     if (num_terms == 0){
         return 0;
-    } else if (num_terms == 1 || num_terms == 2){
+    } else if (num_terms == 1){
         return 1;
     } else{
         return fibonacci(num_terms - 1) + fibonacci(num_terms - 2);
