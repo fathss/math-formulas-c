@@ -1,7 +1,7 @@
 # Fibonacci sequence
 In mathematics, the Fibonacci sequence is a sequence which each number is the sum of the two numbers that precede it. Numbers that are part of the Fibonacci sequence are known as **Fibonacci numbers**, commonly denoted _Fn_. 
 <br><br>
-The first 20 Fibonacci numbers _Fn_ are:
+The 20th sequence starting from 0th is:
 ```
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181 
 ```
