@@ -16,7 +16,7 @@ int main(){
 }
 
 ullint factorial(ullint baseNumber){
-    if (baseNumber == 0 || baseNumber == 1){
+    if (baseNumber == 0){
         return 1;
     }
     return baseNumber * factorial(baseNumber-1);
