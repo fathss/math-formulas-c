@@ -9,6 +9,10 @@ int main(){
     puts("Due to the limitations of data types in C, this program only limits the input until the 93th sequence.\n");
     printf(">>>> ");
     scanf("%d", &n);
+    if (n > 93){
+        puts("Over exceeding the limit");
+        exit(0);
+    }
     printf(">>>> ");
 
     ullint a = 0, b = 1, c;
