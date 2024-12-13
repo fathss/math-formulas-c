@@ -14,37 +14,34 @@ From the formula above we know that:
 We can create a function that has one parameter
 <br>
 <pre>typedef unsigned long long ullint;<br>ullint factorial(ullint baseNumber);</pre>
-Where 
-<ul>
-  <li>
-    <strong>ullint</strong> is a custom data type for <strong>unsigned long long</strong>, which is used to store large numbers (64-bit integer).
-  </li>
-  <li>
-    <strong>factorial</strong> is the name of the function
-  </li>
-  <li>
-    <strong>(ullint baseNumber)</strong> is the parameter of the function, which is the number you want to calculate the factorial of.
-  </li>
-</ul>
-<br>
-So, looking from the formula, the inside of the function would be:
+Where ```ullint``` is a custom data type for <strong>unsigned long long</strong>, which is used to store large numbers (64-bit integer).<br>
+```factorial``` is the name of the function.<br>
+```(ullint baseNumber)``` is the parameter of the function, which is the number you want to calculate the factorial of.
 <br><br>
-<pre>ullint factorial(ullint baseNumber){
+So, looking from the formula, the inside of the function would be:
+
+
+```
+ullint factorial(ullint baseNumber){
     if (baseNumber == 0){
         return 1;
     }
     return baseNumber * factorial(baseNumber-1);
-}</pre>
-<pre>if (baseNumber == 0){
+}
+```
+```
+if (baseNumber == 0){
     return 1;
 }
-</pre>
+```
 This part is a base case.
 In recursion we need a condition that stops the function from calling itself endlessly.
 <br>
 By definition, 0! = 1. So if the input baseNumber is 0, the function return 1 directly, and no further recursion happends.
-<br><br>
-<pre>return baseNumber * factorial(baseNumber - 1);</pre>
+
+```
+return baseNumber * factorial(baseNumber - 1);
+```
 If <strong>baseNumber</strong> is not 0, the function calculates the factorial by multiplying <strong>baseNumber</strong> by the result of calling <strong>factorial(baseNumber - 1)</strong>
 <br><br>
 Let's see how it works for calculating 5!:
