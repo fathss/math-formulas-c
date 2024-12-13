@@ -10,6 +10,10 @@ int main(){
     puts("Due to the limitations of data types in C, this program can only represent 0! to 20! factorial");
     printf(">>>> ");
     scanf("%d", &n);
+    if (n > 20){
+        puts("Over exceeding the limit");
+        exit(0);
+    }
     printf(">>>> %llu", factorial(n));
 
     return 0;
