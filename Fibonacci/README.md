@@ -3,7 +3,7 @@ In mathematics, the Fibonacci sequence is a sequence which each number is the su
 <br><br>
 The 20th sequence starting from 0th is:
 ```
-0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181 
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765 
 ```
 
 Many writers begin the sequence with 0 and 1, although some authors start it from 1 and 1. The program i create will begin from 0.
