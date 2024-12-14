@@ -6,4 +6,5 @@ A collection of mathematical formulas and algorithms implemented in C. This proj
 <ul>
   <li>Factorial</li>
   <li>Fibonacci Sequence</li>
+  <li>Greates Common Divisor (GCD)</li>
 </ul>
