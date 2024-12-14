@@ -31,3 +31,20 @@ For example, to compute ```gcd(54, 24)```, the computation is as follows:
 <br>            ->  gcd(6, 24 mod 6) = gcd(6, 0).
 </pre>
 This gives ```gcd(54, 24) = 6.```
+
+## How it works in C
+We can implement the formula above using a while loop. Where if _b_ is not 0 the loop will continue until so.
+```c
+while (b != 0){
+    mod = a % b;
+    a = b;
+    b = mod;
+}
+```
+### Explanation
+1. You start with two numbers ```a``` and ```b``` (e.g., ```a = 54```, ```b = 24```).
+2. ```while (b != 0)```. The loop continues as long as ```b``` is not zero. When ```b``` becomes zero, the loop stops, and the value of ```a``` is the GCD.
+3. ```mod = a % b```. This calculates the remainder when ```a``` is divided by ```b```.For example, ```54 % 24 = 6```. (6 is the remainder).
+4. ```a = b```. The value of ```b``` is now assigned to ```a```. For example, ```a``` now becomes 24.
+5. ```b = mod```. The remainder (```mod```) becomes the new value of ```b```. For example, ```b``` now becomes 6.
+6. Repeat the process until ```b``` becomes 0.
